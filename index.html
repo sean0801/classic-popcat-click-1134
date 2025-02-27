@@ -5,6 +5,12 @@
     <title>POPCAT CLASSIC</title>
 
     <style>
+
+        /*body box 編距為0*/
+        body {
+            margin: 0;
+        }
+
         /*容器 box 高度100vh flex排版方向column 置中*/
         .container {
             height: 100vh;
@@ -25,6 +31,11 @@
             margin-top: 2em;
         }
 
+        /*文字 div 排版填滿剩餘空間*/
+        .cat-img {
+            flex: 1;
+        }
+
         /*文字 box 寬度100%*/
         .cat-img {
             width: 100%;
@@ -38,9 +49,37 @@
             -webkit-text-stroke: 3px black;
         }
 
+        /*字型 sans-serif*/
+        .cat-img {
+            font-family: sans-serif;
+        }
+
+        /*防止文字被選取*/
+        .cat-img {
+            user-select: none;
+        }
+
+        /*標題 box 最大寬度 600px*/
+        .title {
+            max-width: 600px;
+        }
+
+        /*文字 box 最大寬度 800px*/
+        .cat-img {
+            max-width: 800px;
+        }
+
         /*文字 div 背景圖片 用 id 設定imgs/p.png 圖片靠下 填滿容器contain 不重複*/
         #p {
             background-image: url('imgs/p.png');
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /*新贈文字 div 背景圖片 用 id 設定 imgs/op.png*/
+        #p {
+            background-image: url('imgs/op.png');
             background-position: bottom;
             background-size: contain;
             background-repeat: no-repeat;
@@ -50,6 +89,7 @@
 </head>
 
 <body>
+
 <!--新增容器去包裹標題圖片與點擊數-->
 <div class="container">
     <img class="title" src="imgs/popcat.svg" alt="POPCAT">
