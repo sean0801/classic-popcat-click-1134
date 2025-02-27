@@ -3,6 +3,50 @@
 <html lang="en">
 <head>
     <title>POPCAT CLASSIC</title>
+
+    <style>
+        /*容器 box 高度100vh flex排版方向column 置中*/
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+        }
+
+        /*容器樣式 背景顏色 #bdaa90*/
+        .container {
+            background-color: #bdaa90;
+        }
+
+        /*標題 box 寬度80% 上方間距 2em*/
+        .title {
+            width: 80%;
+            margin-top: 2em;
+        }
+
+        /*文字 box 寬度100%*/
+        .cat-img {
+            width: 100%;
+        }
+
+        /*文字樣式 文字置中 文字白色 大小80px -webkit-text-stroke 3px 黑色*/
+        .cat-img {
+            text-align: center;
+            color: white;
+            font-size: 80px;
+            -webkit-text-stroke: 3px black;
+        }
+
+        /*文字 div 背景圖片 用 id 設定imgs/p.png 圖片靠下 填滿容器contain 不重複*/
+        #p {
+            background-image: url('imgs/p.png');
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+    </style>
 </head>
 
 <body>
