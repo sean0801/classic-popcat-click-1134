@@ -78,7 +78,7 @@
         }
 
         /*新贈文字 div 背景圖片 用 id 設定 imgs/op.png*/
-        #p {
+        #op {
             background-image: url('imgs/op.png');
             background-position: bottom;
             background-size: contain;
@@ -95,5 +95,32 @@
     <img class="title" src="imgs/popcat.svg" alt="POPCAT">
     <div class="cat-img" id="p">0</div>
 </div>
+
+<script>
+    // 計數器初始化
+    let count = 0;
+
+    // 寫一個function 計數器累加
+    function add() {
+        count++;
+        document.getElementById('p').innerText = count;
+    }
+
+    // 註冊滑鼠按下的事件
+    document.addEventListener('mousedown', function() {
+        add();
+        document.getElementById('p').style.backgroundImage = "url('imgs/op.png')";
+        let audio = new Audio('pops/pop1.mp3');
+        audio.play();
+    });
+
+    // 註冊滑鼠放開的事件
+    document.addEventListener('mouseup', function() {
+        document.getElementById('p').style.backgroundImage = "url('imgs/p.png')";
+    });
+
+    // 將初始化計數器顯示到 HTML 元素，用 id 抓取
+    document.getElementById('p').innerText = count;
+</script>
 </body>
 </html>
